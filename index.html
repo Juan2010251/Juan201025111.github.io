@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Jo! ¡Jo! ¡Jo!</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+<body>
+    <h1>¡¡Envía una carta a Papá Noel!!</h1>
+    <p>¡La Navidad llega, qué gran emoción!
+        Pronto hablarás con Papá Noel de corazón.
+        Prepárate con alegría, ríe y sé fiel,
+        porque te espera el gran Papá Noel.    
+    </p>
+    <p>El día de hoy tendrás la suerte de enviarle una carta 
+        a Papá Noel a través de esta página web. Nos encontramos
+        muy emocionados de expandir nuestro envío de cartas a 
+        todas aquellas personas que no tienen un buzón donde enviarlas.
+        Te deseamos un excelente día y que pases tu navidad con mucha
+        felicidad junto a tu familia.
+    </p>
+    <p>ATT: El equipo de elfos de Santa.</p>
+    <h2>¡¡EMPECEMOS!!</h2>
+
+    <form id="santaForm" onsubmit="handleFormSubmit(event)">
+        <label for="name"><strong>Nombre Completo:</strong></label><br>
+        <input type="text" id="name" name="name" placeholder="Escribe tu nombre completo" required><br><br>
+
+        <label for="age"><strong>Edad:</strong></label><br>
+        <input type="number" id="age" name="age" placeholder="Escribe tu edad" min="0" required><br><br>
+
+        <label for="gift"><strong>Regalo:</strong></label><br>
+        <input type="text" id="gift" name="gift" placeholder="¿Qué quieres para Navidad?" required><br><br>
+
+        <p><strong>¿Te has portado bien este año?</strong></p>
+        <div>
+            <input type="radio" id="good" name="behavior" value="good" required>
+            <label for="good"><strong>Sí</strong></label>
+        </div>
+        <div>
+            <input type="radio" id="bad" name="behavior" value="bad" required>
+            <label for="bad"><strong>No</strong></label>
+        </div>
+
+        <p><strong>¿Cuál es tu género?</strong></p>
+        <div>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male"><strong>Hombre</strong></label>
+        </div>
+        <div>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female"><strong>Mujer</strong></label>
+        </div><br><br>
+
+        <button type="submit">Enviar carta</button>
+    </form>
+
+    <p id="responseMessage" style="font-weight: bold; margin-top: 20px;"></p>
+    <script src="Java.js"></script>
+</body>
+</html>
+
